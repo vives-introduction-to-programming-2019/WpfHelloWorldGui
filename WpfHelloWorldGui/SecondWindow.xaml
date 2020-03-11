@@ -11,6 +11,7 @@
             <TextBlock Text="Welcome to second window" />
             <TextBlock x:Name="username"
                        Text="???" />
+            <Button Content="Exit Application" />
         </StackPanel>
     </Grid>
 </Window>

@@ -15,11 +15,11 @@
 
         <!-- Buttons using stackpanel -->
         <StackPanel Orientation="Horizontal">
-            <Button Padding="10" Content="Start" />
+            <Button Content="Start" />
             <Button Content="Pause" />
             <Button Content="Stop" />
 
-            <Button Margin="10 0" x:Name="switchToSecondWindow"
+            <Button x:Name="switchToSecondWindow"
                     Click="SwitchToSecondWindow_Click"
                     Content="Switch Windows" />
         </StackPanel>
@@ -71,7 +71,8 @@
         <Separator Margin="10" />
 
         <Button x:Name="register" Click="Register_Click" Content="Register" Margin="50 0"
-                IsDefault="True" Background="#FFF30909" />
+                IsDefault="True"
+                Style="{StaticResource DefaultButton}"/>
         
         <Separator Margin="10" />
 
@@ -93,4 +94,8 @@
         <Image Source="./vm_snapshot.png" />
 
     </StackPanel>
+
+    <Window.Resources>
+
+    </Window.Resources>
 </Window>
