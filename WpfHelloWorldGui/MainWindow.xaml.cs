@@ -28,11 +28,11 @@ namespace WpfHelloWorldGui
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Someone clicked the register button");
-            Console.WriteLine("User name = " + name.Text);
+            Console.WriteLine("User name = " + nickname.Text);
 
             int userAge = Convert.ToInt32(age.Text);
 
-            log.Text = "Name = " + name.Text;
+            log.Text = "Name = " + nickname.Text;
             log.AppendText("\nAge of user is " + userAge);
             log.AppendText("\nGender of user is " + gender.Text);
 
@@ -48,6 +48,22 @@ namespace WpfHelloWorldGui
             {
                 log.Background = Brushes.Aqua;
             }
+        }
+
+        private void SwitchToSecondWindow_Click(object sender, RoutedEventArgs e)
+        {
+            // Pass the name of the user via constructor
+            SecondWindow secondWindow = new SecondWindow(nickname.Text);
+
+            // Or via setter
+            //secondWindow.SetName("Nico");       // Works too
+
+            // Dont
+            //secondWindow.username.Text = "Nico";        // DONT DO THIS !!!!!!!
+
+            // Show second window and close current
+            secondWindow.Show();
+            this.Close();
         }
     }
 }
