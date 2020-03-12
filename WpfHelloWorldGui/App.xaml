@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:WpfHelloWorldGui"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF383838" />
+            <Setter Property="Foreground" Value="#FFE6E6E6" />
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="FontFamily" Value="Showcard Gothic" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type Button}}"
+               TargetType="Button" x:Key="DefaultButton">
+            <Setter Property="Background" Value="DarkGreen" />
+        </Style>
     </Application.Resources>
 </Application>
